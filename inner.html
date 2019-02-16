@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Глейси, Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -14,8 +17,8 @@
       </a>
       <ul class="site-navigation">
         <li class="site-navigation-current">
-          <a>Каталог</a>
-          <ul class="catalog">
+          <a class="main-menu current">Каталог</a>
+          <ul class="catalog-menu">
             <li><a class="new-products" href="#">Новинки</a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -23,18 +26,18 @@
             <li><a href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">О Компании</a></li>
+        <li><a class="main-menu" href="#">Доставка и оплата</a></li>
+        <li><a class="main-menu" href="#">О Компании</a></li>
       </ul>
       <ul class="user-navigation">
-        <li>
-          <a class="search">Поиск</a>
+        <li class="search">
+          <a href="#">Поиск</a>
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" id="id-search" name="search" placeholder="Что ищем?">
             <label class="visually-hidden" for="id-search">Поиск</label>
           </form>
         </li>
-        <li>
+        <li class="navigation-enter">
           <a href="#">Вход</a>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
@@ -54,7 +57,7 @@
           </form>
         </li>
         <li>
-          <p class="visually-hidden">Содержимое корзины</p>
+          <span class="cart-not-empty visually-hidden">Содержимое корзины</span>
           <a class="cart-not-empty" href="#">2 товара</a>
           <section class="cart">
             <table>
@@ -84,7 +87,7 @@
     </nav>
     <div class="call-us">
       <p class="visually-hidden">С нами можно связаться:</p>
-      <p>С 10 до 20, ежедневно</p>
+      <p class="call-hours">С 10 до 20, ежедневно</p>
       <p class="tel">8 812 450-25-25</p>
     </div>
   </header>
@@ -171,7 +174,7 @@
               <b>310₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-1-row-1.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
+            <img src="img/orange-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
           </a>
         </li>
         <li class="catalog-item">
@@ -181,7 +184,7 @@
               <b>380₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-2-row-1.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
+            <img src="img/coffee-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
           </a>
         </li>
         <li class="catalog-item">
@@ -191,7 +194,7 @@
               <b>355₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-3-row-1.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
+            <img src="img/strawberry-white-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
           </a>
         </li>
         <li class="catalog-item">
@@ -201,7 +204,7 @@
               <b>415₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-4-row-1.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
+            <img src="img/creme-brulee-ice-cream.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
           </a>
         </li>
         <li class="catalog-item">
@@ -211,7 +214,7 @@
               <b>325₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-1-row-2.png" width="267" height="267" alt="Фотография сливочного мороженого с брусничным джемом">
+            <img src="img/lingonberry-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с брусничным джемом">
           </a>
         </li>
         <li class="catalog-item">
@@ -221,7 +224,7 @@
               <b>410₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-2-row-2.png" width="267" height="267" alt="Фотография сливочно-черничного мороженого с цельными ягодами черники">
+            <img src="img/blueberry-ice-cream.png" width="267" height="267" alt="Фотография сливочно-черничного мороженого с цельными ягодами черники">
           </a>
         </li>
         <li class="catalog-item">
@@ -231,7 +234,7 @@
               <b>375₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-3-row-2.png" width="267" height="267" alt="Фотография сливочно-лимонного мороженого с карамельной присыпкой">
+            <img src="img/lemon-ice-cream.png" width="267" height="267" alt="Фотография сливочно-лимонного мороженого с карамельной присыпкой">
           </a>
         </li>
         <li class="catalog-item">
@@ -241,7 +244,7 @@
               <b>320₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-4-row-2.png" width="267" height="267" alt="Фотография сливочного мороженого с шоколадной стружкой">
+            <img src="img/chocolate-chips-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с шоколадной стружкой">
           </a>
         </li>
         <li class="catalog-item">
@@ -251,7 +254,7 @@
               <b>440₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-1-row-3.png" width="267" height="267" alt="Фотография сливочно-ванильного мороженого с кусочками шоколада">
+            <img src="img/vanilla-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-ванильного мороженого с кусочками шоколада">
           </a>
         </li>
         <li class="catalog-item">
@@ -261,7 +264,7 @@
               <b>435₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-2-row-3.png" width="267" height="267" alt="Фотография сливочного мороженого с ментоловым сиропом">
+            <img src="img/menthol-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с ментоловым сиропом">
           </a>
         </li>
         <li class="catalog-item">
@@ -271,7 +274,7 @@
               <b>355₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-3-row-3.png" width="267" height="267" alt="Фотография сливочного мороженого с кусочками черного шоколада">
+            <img src="img/dark-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с кусочками черного шоколада">
           </a>
         </li>
         <li class="catalog-item">
@@ -281,7 +284,7 @@
               <b>420₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-4-row-3.png" width="267" height="267" alt="Фотография сливочного мороженого с мятным сиропом">
+            <img src="img/mint-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с мятным сиропом">
           </a>
         </li>
       </ul>
@@ -289,12 +292,13 @@
     <section class="pagination-list">
       <h2 class="visually-hidden">Переключатель страниц</h2>
       <ul>
+        <li class="pagination-item pagination-item-disabled"><a>Назад</a></li>
         <li class="pagination-item pagination-item-current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li class="pagination-item"><a href="#">Далее</a></li>
+        <li class="pagination-item"><a href="#">Вперед</a></li>
       </ul>
     </section>
   </main>
@@ -305,14 +309,12 @@
       <li><a class="visually-hidden social-button facebook" href="#" title="Наша страница в Фейсбуке">Фейсбук</a></li>
       <li><a class="visually-hidden social-button vkontakte" href="#" title="Наша страница во Вконтакте">Вконтакте</a></li>
     </ul>
-    <nav class="footer-navigation">
-      <ul>
-        <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
-        <li><a href="#">Наши документы</a></li>
-        <li><a href="#">О производстве</a></li>
-        <li><a href="#">Экологические стандарты</a></li>
-      </ul>
-    </nav>
+    <ul class="footer-navigation">
+      <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
+      <li><a href="#">Наши документы</a></li>
+      <li><a href="#">О производстве</a></li>
+      <li><a href="#">Экологические стандарты</a></li>
+    </ul>
     <p class="footer-copyright">
       Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
     </p>

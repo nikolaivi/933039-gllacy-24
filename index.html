@@ -4,9 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="index-page">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" title="Логотип магазина Глэйси">
@@ -14,8 +17,8 @@
       </a>
       <ul class="site-navigation">
         <li>
-          <a href="inner.html">Каталог</a>
-          <ul class="catalog">
+          <a class="main-menu" href="inner.html">Каталог</a>
+          <ul class="catalog-menu">
             <li><a class="new-products" href="#">Новинки</a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -23,18 +26,18 @@
             <li><a href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">О Компании</a></li>
+        <li><a class="main-menu" href="#">Доставка и оплата</a></li>
+        <li><a class="main-menu" href="#">О Компании</a></li>
       </ul>
       <ul class="user-navigation">
-        <li>
-          <a class="search">Поиск</a>
+        <li class="search">
+          <a href="#">Поиск</a>
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" id="id-search" name="search" placeholder="Что ищем?">
             <label class="visually-hidden" for="id-search">Поиск</label>
           </form>
         </li>
-        <li>
+        <li class="navigation-enter">
           <a href="#">Вход</a>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
@@ -54,7 +57,7 @@
           </form>
         </li>
         <li>
-          <p class="visually-hidden">Содержимое корзины</p>
+          <span class="cart-empty visually-hidden">Содержимое корзины</span>
           <a class="cart-empty" href="#">Пусто</a>
         </li>
       </ul>
@@ -68,16 +71,21 @@
   <main class="container">
     <section class="special-offers">
       <h2 class="visually-hidden">Специальные предложения</h2>
-      <div class="special-offers-1">
-        <b>Крем-брюле и пломбир с малиновым джемом</b>
+      <ul class="switch-slides">
+        <li><button class="switch-button active">Первый слайд</button></li>
+        <li><button class="switch-button">Второй слайд</button></li>
+        <li><button class="switch-button">Третий слайд</button></li>
+      </ul>
+      <div class="special-offers-item">
+        <p><b>Крем-брюле и пломбир с малиновым джемом</b></p>
         <a class="button" href="#">Давайте оба!</a>
       </div>
-      <div class="special-offers-2">
-        <b>Шоколадный пломбир и лимонный сорбет</b>
+      <div class="special-offers-item">
+        <p><b>Шоколадный пломбир и лимонный сорбет</b></p>
         <a class="button" href="#">Давайте оба!</a>
       </div>
-      <div class="special-offers-3">
-        <b>Пломбир с помадкой и клубничный щербет</b>
+      <div class="special-offers-item">
+        <p><b>Пломбир с помадкой и клубничный щербет</b></p>
         <a class="button" href="#">Давайте оба!</a>
       </div>
       <div class="free-raspberries">
@@ -101,7 +109,7 @@
               <b>310₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-1-row-1.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
+            <img src="img/orange-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
           </a>
         </li>
         <li class="best-sellers-item">
@@ -111,7 +119,7 @@
               <b>380₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-2-row-1.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
+            <img src="img/coffee-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
           </a>
         </li>
         <li class="best-sellers-item">
@@ -121,7 +129,7 @@
               <b>355₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-3-row-1.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
+            <img src="img/strawberry-white-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
           </a>
         </li>
         <li class="best-sellers-item">
@@ -131,7 +139,7 @@
               <b>415₽</b>
               <span class="weight">/кг</span>
             </p>
-            <img src="img/product-4-row-1.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
+            <img src="img/creme-brulee-ice-cream.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
           </a>
         </li>
       </ul>
@@ -164,14 +172,16 @@
         <a href="#"><b>10 способов сервировки фруктовых щербетов к столу</b></a>
       </article>
       <section class="our-news">
-        <h2 class="visually-hidden">Наша рассылка</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-          Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="id-news-email">Электронная почта</label>
-          <input type="email" name="news-email" id="id-news-email" placeholder="Электронная почта" required>
-          <button class="button" type="submit">Отправить</button>
-        </form>
+        <div>
+          <h2 class="visually-hidden">Наша рассылка</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="id-news-email">Электронная почта</label>
+            <input type="email" name="news-email" id="id-news-email" placeholder="Электронная почта" required>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
     </div>
     <section class="our-contacts">
@@ -197,10 +207,10 @@
   </main>
   <footer class="main-footer">
     <ul class="footer-social">
-      <li><a class="visually-hidden social-button-twitter" href="#" title="Наша страница в Твиттере">Твиттер</a></li>
-      <li><a class="visually-hidden social-button-instagram" href="#" title="Наша страница в Инстаграме">Инстаграм</a></li>
-      <li><a class="visually-hidden social-button-facebook" href="#" title="Наша страница в Фейсбуке">Фейсбук</a></li>
-      <li><a class="visually-hidden social-button-vkontakte" href="#" title="Наша страница во Вконтакте">Вконтакте</a></li>
+      <li><a class="visually-hidden social-button twitter" href="#" title="Наша страница в Твиттере">Твиттер</a></li>
+      <li><a class="visually-hidden social-button instagram" href="#" title="Наша страница в Инстаграме">Инстаграм</a></li>
+      <li><a class="visually-hidden social-button facebook" href="#" title="Наша страница в Фейсбуке">Фейсбук</a></li>
+      <li><a class="visually-hidden social-button vkontakte" href="#" title="Наша страница во Вконтакте">Вконтакте</a></li>
     </ul>
     <ul class="footer-navigation">
       <li><a class="for-suppliers" href="#">Для поставщиков</a></li>

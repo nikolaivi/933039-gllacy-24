@@ -1,0 +1,482 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(132, 157, 143);
+
+}
+
+a {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: inherit;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: rgb(255, 188, 158);
+}
+
+.index-page {
+  background-image: url("../img/ice-cream-1-background.png");
+  background-repeat: no-repeat;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="text"]:hover {
+  border-width: 2px;
+  border-color: rgb(154, 154, 154);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:hover,
+input[type="text"]:focus {
+  border-width: 2px;
+  border-color: rgb(46, 136, 228);
+}
+
+input[type="email"]:valid,
+input[type="password"]:valid,
+input[type="search"]:valid,
+input[type="text"]:valid {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgb(50, 50, 50);
+}
+
+.main-navigation {
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.search,
+.navigation-enter,
+.cart-empty,
+.cart-not-empty {
+  text-decoration: none;
+}
+
+.search a,
+.navigation-enter a,
+.cart-empty,
+.cart-empty:hover,
+.cart-empty:active {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color:rgb(255, 255, 255);
+
+  background-color: rgb(161, 180, 169);
+}
+
+.main-menu:hover,
+.main-menu:focus,
+.main-menu:active {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(248, 247, 244);
+}
+
+.main-menu.current {
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(208, 112, 88);
+}
+
+.search a:hover,
+.search a:focus,
+.navigation-enter a:hover,
+.navigation-enter a:focus,
+.cart-not-empty,
+.cart-not-empty:hover,
+.cart-not-empty:active {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(248, 247, 244);
+}
+
+.call-us {
+  text-align: right;
+}
+
+.call-hours {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.call-us .tel {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.switch-slides {
+   list-style: none;
+}
+
+.switch-button {
+  background-color: rgb(132, 157, 143);
+}
+
+.switch-button:hover {
+  background-color: rgb(178, 193, 183);
+
+  cursor: pointer;
+}
+
+.switch-button.active,
+.switch-button:active {
+  background-color: rgb(255, 255, 255);
+
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+  background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+}
+
+.button:hover,
+.button:focus {
+  color: rgb(255, 255, 255);
+}
+
+.button:active {
+  background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+}
+
+
+.special-offers-item {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.special-offers-item .button {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.free-raspberries,
+.free-chocolate {
+  width: 560px;
+  height: 230px;
+
+  border-radius: 15px;
+}
+
+.free-raspberries {
+  background-image: url("../img/raspberry-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.free-chocolate {
+  background-image: url("../img/chocolate-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.special-offers h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.free-raspberries p,
+.free-chocolate p {
+  font-size: 18px;
+}
+
+.best-sellers ul,
+.catalog ul {
+  list-style: none;
+}
+
+.best-sellers-item h3,
+.catalog-item h3 {
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.best-sellers-item b,
+.catalog-item b {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.best-sellers-item .weight,
+.catalog-item .weight {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.our-features {
+  width: 1146px;
+  height: 307px;
+
+  background-image: url("../img/waffle-background.jpg");
+  border-radius: 15px;
+}
+
+.our-features h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.our-features p {
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+}
+
+.our-blog {
+  width: 560px;
+  height: 220px;
+
+  background-image: url("../img/strawberry-background.png");
+}
+
+.our-blog h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+}
+
+.our-blog b {
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(50, 50, 50);
+
+  text-decoration: underline;
+}
+
+.our-news {
+  width: 560px;
+  height: 220px;
+
+  background-image: url("../img/contact-background.png");
+}
+
+.our-news div {
+  width: 550px;
+  height: 210px;
+
+  background-color: rgb(248, 247, 244);
+  border-radius: 10px;
+}
+
+.our-news p {
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+}
+
+.our-news input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+}
+
+.contacts {
+  width: 300px;
+  height: 305px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.our-contacts p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+}
+
+.our-contacts address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(50, 50, 50);
+}
+
+.our-contacts .tel {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-navigation {
+  list-style: none;
+}
+
+.footer-navigation a {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+a.social-button {
+  background-color: rgb(230, 235, 233)
+}
+
+a.social-button:hover {
+  background-color: rgb(255, 255, 255)
+}
+
+a.social-button:active {
+  background-color: rgb(233, 233, 233)
+}
+
+.footer-navigation .for-suppliers {
+  font-weight: 700;
+}
+
+.footer-copyright,
+.footer-copyright a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+
+  list-style: none;
+}
+
+h1 .page-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.filter label,
+.filter legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset ul {
+  list-style: none;
+}
+
+.filter option,
+.filter-option label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.sort select,
+.price-range div {
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(157, 177, 165);
+}
+
+.sort select:hover,
+.sort select:focus {
+  color: rgb(50, 50, 50);
+}
+
+.filter button {
+  line-height: 18px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(157, 177, 165);
+}
+
+.filter button:hover {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.filter button:active {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(234, 234, 234);
+}
+
+.pagination-list ul {
+  list-style: none;
+}
+
+.pagination-item {
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.pagination-item a {
+  text-decoration: none;
+}
+
+.pagination-item-current a,
+.pagination-item a:active {
+  color: rgb(50, 50, 50);
+
+  background-color: rgb(255, 255, 255);
+}
+
+.pagination-item a:hover {
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(157, 177, 165);
+
+  cursor: pointer;
+}
+
+
+
+/* Скрытые попапы */
+
+.catalog-menu,
+.search form,
+.navigation-enter form,
+.modal-feedback,
+.cart {
+  display: none;
+}
