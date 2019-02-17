@@ -1,3 +1,5 @@
+/* Общие стили */
+
 body {
   margin: 0;
   padding: 0;
@@ -25,10 +27,14 @@ a:active {
   color: rgb(255, 188, 158);
 }
 
+/* Стили для фоновой картинки на главной странице */
+
 .index-page {
   background-image: url("../img/ice-cream-1-background.png");
   background-repeat: no-repeat;
 }
+
+/* Общие стили для тектстовых полей форм */
 
 input[type="email"]:hover,
 input[type="password"]:hover,
@@ -55,6 +61,8 @@ input[type="text"]:valid {
   font-weight: 700;
   color: rgb(50, 50, 50);
 }
+
+/* Стили для шапки */
 
 .main-navigation {
   line-height: 18px;
@@ -129,6 +137,8 @@ input[type="text"]:valid {
   line-height: 24px;
 }
 
+/* Стили для переключателей фона */
+
 .switch-slides {
    list-style: none;
 }
@@ -149,6 +159,8 @@ input[type="text"]:valid {
 
 }
 
+/* Стили для кнопок */
+
 .button {
   font-size: 18px;
   line-height: 24px;
@@ -168,6 +180,7 @@ input[type="text"]:valid {
   background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
 }
 
+/* Стили для текста слайдов и кнопок */
 
 .special-offers-item {
   font-size: 60px;
@@ -179,6 +192,8 @@ input[type="text"]:valid {
   font-size: 32px;
   line-height: 44px;
 }
+
+/* Стили для предложений по малине и шоколаду */
 
 .free-raspberries,
 .free-chocolate {
@@ -208,6 +223,8 @@ input[type="text"]:valid {
   font-size: 18px;
 }
 
+/* Стили для предложений по наиболее популярным товарам, а также каталога с товарами */
+
 .best-sellers ul,
 .catalog ul {
   list-style: none;
@@ -231,6 +248,8 @@ input[type="text"]:valid {
   font-size: 30px;
   line-height: 45px;
 }
+
+/* Стили для описания преимуществ магазина */
 
 .our-features {
   width: 1146px;
@@ -256,6 +275,8 @@ input[type="text"]:valid {
   color: rgb(50, 50, 50);
 }
 
+/* Стили для описания блога */
+
 .our-blog {
   width: 560px;
   height: 220px;
@@ -277,6 +298,8 @@ input[type="text"]:valid {
 
   text-decoration: underline;
 }
+
+/* Стили для описания раздела с рассылкой */
 
 .our-news {
   width: 560px;
@@ -310,6 +333,8 @@ input[type="text"]:valid {
   border-radius: 5px;
 }
 
+/* Стили для раздела с контактной информацией */
+
 .contacts {
   width: 300px;
   height: 305px;
@@ -335,6 +360,8 @@ input[type="text"]:valid {
   font-size: 18px;
   font-weight: 700;
 }
+
+/* Стили для подвала */
 
 .footer-navigation {
   list-style: none;
@@ -373,6 +400,8 @@ a.social-button:active {
   font-weight: 400;
 }
 
+/* Стили для хлебных крошек и заголовка страницы с каталогом*/
+
 .breadcrumbs,
 .breadcrumbs a {
   font-size: 14px;
@@ -386,6 +415,8 @@ h1 .page-title {
   font-size: 35px;
   line-height: 41px;
 }
+
+/* Стили для формы поиска */
 
 .filter label,
 .filter legend {
@@ -440,6 +471,8 @@ fieldset ul {
 
   background-color: rgb(234, 234, 234);
 }
+
+/* Стили для нумерации страниц */
 
 .pagination-list ul {
   list-style: none;

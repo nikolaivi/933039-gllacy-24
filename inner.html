@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Глейси, Каталог</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -61,11 +61,13 @@
           <a class="cart-not-empty" href="#">2 товара</a>
           <section class="cart">
             <table>
-              <tr>
-                <th class="visually-hidden item-name">Наименование товара</th>
-                <th class="visually-hidden weight-price">Вес и цена</th>
-                <th class="visually-hidden total-price">Общая стоимость</th>
-              </tr>
+              <thead>
+                <tr>
+                  <th class="visually-hidden item-name">Наименование товара</th>
+                  <th class="visually-hidden weight-price">Вес и цена</th>
+                  <th class="visually-hidden total-price">Общая стоимость</th>
+                </tr>
+              </thead>
               <tr>
                 <td>Пломбир с апельсиновым джемом</td>
                 <td>1,5 кг &#xd7; 200 руб.</td>
@@ -76,9 +78,11 @@
                 <td>1,5 кг &#xd7; 300 руб.</td>
                 <td>450 руб.</td>
               </tr>
-              <tr>
-                <td class="total-price-all" colspan="3">Итого: 750 руб.</td>
-              </tr>
+              <tfoot>
+                <tr>
+                  <td class="total-price-all" colspan="3">Итого: 750 руб.</td>
+                </tr>
+              </tfoot>
             </table>
             <a class="button" href="#">Оформить заказ</a>
           </section>
