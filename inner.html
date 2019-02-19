@@ -57,7 +57,7 @@
           </form>
         </li>
         <li>
-          <span class="cart-not-empty visually-hidden">Содержимое корзины</span>
+          <p class="visually-hidden">Содержимое корзины</p>
           <a class="cart-not-empty" href="#">2 товара</a>
           <section class="cart">
             <table>
@@ -95,7 +95,7 @@
       <p class="tel">8 812 450-25-25</p>
     </div>
   </header>
-  <main>
+  <main class="inner-container">
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Каталог</a></li>
@@ -103,14 +103,14 @@
     </ul>
     <h1 class="page-title">Сливочное мороженое</h1>
     <section class="filter">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <!-- <h2 class="visually-hidden">Фильтр товаров</h2> -->
+      <form class="sort-form" action="https://echo.htmlacademy.ru" method="get">
         <p class="sort">
           <label for="id-sort">Сортировка:</label>
           <select name="sort" id="id-sort" autofocus>
             <option value="sort-popular">по популярности</option>
-            <option value="sort-cheap">сначала недорогие</option>
-            <option value="sort-expensive">сначала дорогие</option>
+            <option value="sort-low-price">сначала недорогие</option>
+            <option value="sort-high-price">сначала дорогие</option>
             <option value="sort-fat-content">по жирности</option>
           </select>
         </p>
@@ -175,7 +175,7 @@
           <a href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <p class="item-price">
-              <b>310₽</b>
+              <b>310</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/orange-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
@@ -185,7 +185,7 @@
           <a href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
             <p class="item-price">
-              <b>380₽</b>
+              <b>380</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/coffee-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
@@ -195,7 +195,7 @@
           <a href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <p class="item-price">
-              <b>355₽</b>
+              <b>355</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/strawberry-white-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
@@ -205,7 +205,7 @@
           <a href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             <p class="item-price">
-              <b>415₽</b>
+              <b>415</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/creme-brulee-ice-cream.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
@@ -215,7 +215,7 @@
           <a href="#">
             <h3>Сливочное с брусничным джемом</h3>
             <p class="item-price">
-              <b>325₽</b>
+              <b>325</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/lingonberry-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с брусничным джемом">
@@ -225,7 +225,7 @@
           <a href="#">
             <h3>Сливочно-черничное с цельными ягодами черники</h3>
             <p class="item-price">
-              <b>410₽</b>
+              <b>410</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/blueberry-ice-cream.png" width="267" height="267" alt="Фотография сливочно-черничного мороженого с цельными ягодами черники">
@@ -235,7 +235,7 @@
           <a href="#">
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
             <p class="item-price">
-              <b>375₽</b>
+              <b>375</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/lemon-ice-cream.png" width="267" height="267" alt="Фотография сливочно-лимонного мороженого с карамельной присыпкой">
@@ -245,7 +245,7 @@
           <a href="#">
             <h3>Сливочное с шоколадной стружкой</h3>
             <p class="item-price">
-              <b>320₽</b>
+              <b>320</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/chocolate-chips-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с шоколадной стружкой">
@@ -255,7 +255,7 @@
           <a href="#">
             <h3>Сливочно-ванильное с кусочками шоколада</h3>
             <p class="item-price">
-              <b>440₽</b>
+              <b>440</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/vanilla-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-ванильного мороженого с кусочками шоколада">
@@ -265,7 +265,7 @@
           <a href="#">
             <h3>Сливочноe с ментоловым сиропом</h3>
             <p class="item-price">
-              <b>435₽</b>
+              <b>435</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/menthol-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с ментоловым сиропом">
@@ -275,7 +275,7 @@
           <a href="#">
             <h3>Сливочное с кусочками черного шоколада</h3>
             <p class="item-price">
-              <b>355₽</b>
+              <b>355</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/dark-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с кусочками черного шоколада">
@@ -285,7 +285,7 @@
           <a href="#">
             <h3>Сливочное с мятным сиропом</h3>
             <p class="item-price">
-              <b>420₽</b>
+              <b>420</b>
               <span class="weight">/кг</span>
             </p>
             <img src="img/mint-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с мятным сиропом">

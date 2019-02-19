@@ -1,5 +1,15 @@
 /* Общие стили */
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +29,7 @@ a {
   line-height: 18px;
   font-weight: 500;
   color: inherit;
+  text-decoration-color: rgb(159, 179, 168);
 }
 
 a:hover,
@@ -32,6 +43,27 @@ a:active {
 .index-page {
   background-image: url("../img/ice-cream-1-background.png");
   background-repeat: no-repeat;
+  background-position: center 0px;
+}
+
+/* .index-page {
+  background-image: url("../../gllacy/preview/gllacy-index.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+} */
+
+/* Visually-hidden */
+
+.visually-hidden {
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0px !important;
+
+  border: 0px !important;
+
+  clip-path: inset(0px 0px 0px 0px) !important;
+  overflow: hidden !important;
 }
 
 /* Общие стили для тектстовых полей форм */
@@ -64,9 +96,27 @@ input[type="text"]:valid {
 
 /* Стили для шапки */
 
+.main-header {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 9px;
+  padding: 0 27px;
+}
+
 .main-navigation {
+  display: flex;
+
   line-height: 18px;
   color: rgb(255, 255, 255);
+}
+
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+
+  align-self: flex-end;
 }
 
 .site-navigation,
@@ -74,8 +124,37 @@ input[type="text"]:valid {
   list-style: none;
 }
 
+.site-navigation {
+  padding: 0px;
+  width: 600px;
+  margin-left: 24px;
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+}
+
+.main-menu {
+  margin-right: 28px;
+}
+
+.user-navigation {
+  width: 245px;
+  margin-left: auto;
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .search,
-.navigation-enter,
+.navigation-enter {
+  margin-right: 10px;
+}
+
+.search a,
+.navigation-enter a,
 .cart-empty,
 .cart-not-empty {
   text-decoration: none;
@@ -89,9 +168,7 @@ input[type="text"]:valid {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
-  color:rgb(255, 255, 255);
-
-  background-color: rgb(161, 180, 169);
+  color: rgb(255, 255, 255);
 }
 
 .main-menu:hover,
@@ -124,23 +201,63 @@ input[type="text"]:valid {
 }
 
 .call-us {
+  width: 267px;
+  margin-left: auto;
+  margin-top: -2px;
+
   text-align: right;
+
+  align-self: flex-end;
+}
+
+.call-us p {
+  margin: 0px;
+  padding: 0px;
 }
 
 .call-hours {
   font-size: 14px;
   line-height: 16px;
+
+  text-align: right;
 }
 
 .call-us .tel {
+  margin-top: 4px;
+
   font-size: 22px;
   line-height: 24px;
 }
 
+/* Стили для main index.html */
+
+.body-container {
+  width: 1200px;
+  margin-top: 275px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили для main inner.html */
+.inner-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 27px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 /* Стили для переключателей фона */
 
 .switch-slides {
-   list-style: none;
+  list-style: none;
 }
 
 .switch-button {
@@ -168,7 +285,7 @@ input[type="text"]:valid {
   color: rgb(255, 255, 255);
   text-decoration: none;
 
-  background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(0deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
 }
 
 .button:hover,
@@ -177,15 +294,25 @@ input[type="text"]:valid {
 }
 
 .button:active {
-  background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: linear-gradient(0deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
 }
 
 /* Стили для текста слайдов и кнопок */
 
 .special-offers-item {
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: 40px;
+
   font-size: 60px;
   line-height: 60px;
   text-align: center;
+}
+
+.special-offers-item p {
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 30px;
 }
 
 .special-offers-item .button {
@@ -194,6 +321,15 @@ input[type="text"]:valid {
 }
 
 /* Стили для предложений по малине и шоколаду */
+
+.free-items {
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
 
 .free-raspberries,
 .free-chocolate {
@@ -224,14 +360,47 @@ input[type="text"]:valid {
 }
 
 /* Стили для предложений по наиболее популярным товарам, а также каталога с товарами */
+.best-sellers {
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.best-sellers-item,
+.catalog-item {
+  width: 267px;
+}
+
+.best-sellers-item a,
+.catalog-item a {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.catalog-item a:nth-last-of-type(-n + 5) {
+  margin-bottom: 30px;
+}
 
 .best-sellers ul,
 .catalog ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
 .best-sellers-item h3,
 .catalog-item h3 {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
 
   text-align: center;
@@ -241,6 +410,13 @@ input[type="text"]:valid {
 .catalog-item b {
   font-size: 45px;
   line-height: 45px;
+}
+
+.best-sellers-item p,
+.catalog-item p {
+  margin-top: -60px;
+
+  z-index: 1;
 }
 
 .best-sellers-item .weight,
@@ -254,9 +430,16 @@ input[type="text"]:valid {
 .our-features {
   width: 1146px;
   height: 307px;
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: 40px;
 
   background-image: url("../img/waffle-background.jpg");
   border-radius: 15px;
+}
+
+.our-features ul {
+  padding: 0;
 }
 
 .our-features h2 {
@@ -282,7 +465,16 @@ input[type="text"]:valid {
   color: rgb(50, 50, 50);
 }
 
-/* Стили для описания блога */
+/* Стили для описания блога и раздела с рассылкой*/
+
+.blog-and-news {
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
 
 .our-blog {
   width: 560px;
@@ -306,8 +498,6 @@ input[type="text"]:valid {
   text-decoration: underline;
 }
 
-/* Стили для описания раздела с рассылкой */
-
 .our-news {
   width: 560px;
   height: 220px;
@@ -318,6 +508,7 @@ input[type="text"]:valid {
 .our-news div {
   width: 550px;
   height: 210px;
+  margin: 5px;
 
   background-color: rgb(248, 247, 244);
   border-radius: 10px;
@@ -342,7 +533,14 @@ input[type="text"]:valid {
 
 /* Стили для раздела с контактной информацией */
 
+.our-contacts {
+  position: relative;
+}
+
 .contacts {
+  position: absolute;
+  top: 61px;
+  right: 27px;
   width: 300px;
   height: 305px;
 
@@ -369,6 +567,21 @@ input[type="text"]:valid {
 }
 
 /* Стили для подвала */
+
+.main-footer {
+  width: 1200px;
+  padding: 0 27px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer ul {
+  padding: 0;
+}
 
 .footer-navigation {
   list-style: none;
@@ -409,6 +622,17 @@ a.social-button:active {
 
 /* Стили для хлебных крошек и заголовка страницы с каталогом*/
 
+.breadcrumbs {
+  width: 853px;
+  margin: 0;
+  padding: 0;
+  margin-top: -15px;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
 .breadcrumbs,
 .breadcrumbs a {
   font-size: 14px;
@@ -418,12 +642,20 @@ a.social-button:active {
   list-style: none;
 }
 
-h1 .page-title {
+h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
   font-size: 35px;
   line-height: 41px;
 }
 
 /* Стили для формы поиска */
+
+.filter {
+  margin-bottom: 40px;
+}
 
 .filter label,
 .filter legend {
@@ -432,11 +664,17 @@ h1 .page-title {
   font-weight: 500;
 }
 
-fieldset {
+.filter fieldset {
+  margin: 0;
+  padding: 0;
+
   border: none;
 }
 
-fieldset ul {
+.filter ul {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -447,11 +685,50 @@ fieldset ul {
   font-weight: 500;
 }
 
+.sort-form {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.sort {
+  width: 193px;
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.price-range {
+  width: 219px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.fat-content {
+  width: 415px;
+}
+
+.filling {
+  width: 702px;
+  margin-right: 24px;
+}
+
+.sort-form button {
+  width: 145px;
+}
+
+.fat-content li,
+.filling li {
+  display: inline-block;
+}
+
 .sort select,
-.price-range div {
+.price-range input,
+.fat-content ul,
+.filling ul {
   color: rgb(255, 255, 255);
 
-  background-color: rgb(157, 177, 165);
+  background-color: rgb(169, 185, 175);
 }
 
 .sort select:hover,
@@ -460,6 +737,8 @@ fieldset ul {
 }
 
 .filter button {
+  align-self: flex-end;
+
   line-height: 18px;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -480,9 +759,18 @@ fieldset ul {
 }
 
 /* Стили для нумерации страниц */
+.pagination-list {
+  align-self: flex-end;
+}
 
 .pagination-list ul {
+  padding: 0;
+
   list-style: none;
+}
+
+.pagination-list li {
+  display: inline-block;
 }
 
 .pagination-item {
@@ -511,12 +799,13 @@ fieldset ul {
 
 
 
-/* Скрытые попапы */
+/* Скрытые блоки */
 
 .catalog-menu,
 .search form,
 .navigation-enter form,
 .modal-feedback,
-.cart {
+.cart,
+.switch-button {
   display: none;
 }
