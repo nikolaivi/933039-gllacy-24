@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="inner-body">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html" title="Логотип магазина Глэйси">
@@ -30,15 +30,15 @@
         <li><a class="main-menu" href="#">О Компании</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="search">
-          <a href="#">Поиск</a>
+        <li class="search" aria-label="Поиск по сайту">
+          <a class="search-link" href="#"></a>
           <form action="https://echo.htmlacademy.ru" method="get">
             <input type="search" id="id-search" name="search" placeholder="Что ищем?">
             <label class="visually-hidden" for="id-search">Поиск</label>
           </form>
         </li>
-        <li class="navigation-enter">
-          <a href="#">Вход</a>
+        <li class="navigation-login">
+          <a class="login-link" href="#">Вход</a>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
               <input id="id-customer-login-email" type="email" name="customer-login-email" placeholder="Электронная почта"
@@ -56,10 +56,9 @@
             </ul>
           </form>
         </li>
-        <li>
-          <p class="visually-hidden">Содержимое корзины</p>
-          <a class="cart-not-empty" href="#">2 товара</a>
-          <section class="cart">
+        <li class="full-cart" aria-label="Содержимое корзины">
+          <a class="full-cart-link" href="#">2 товара</a>
+          <section class="cart-contents">
             <table>
               <thead>
                 <tr>
@@ -89,8 +88,7 @@
         </li>
       </ul>
     </nav>
-    <div class="call-us">
-      <p class="visually-hidden">С нами можно связаться:</p>
+    <div class="call-us" aria-label="Как с нами можно связаться">
       <p class="call-hours">С 10 до 20, ежедневно</p>
       <p class="tel">8 812 450-25-25</p>
     </div>
@@ -103,7 +101,7 @@
     </ul>
     <h1 class="page-title">Сливочное мороженое</h1>
     <section class="filter">
-      <!-- <h2 class="visually-hidden">Фильтр товаров</h2> -->
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="sort-form" action="https://echo.htmlacademy.ru" method="get">
         <p class="sort">
           <label for="id-sort">Сортировка:</label>
@@ -172,6 +170,7 @@
       <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
       <ul>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <p class="item-price">
@@ -182,6 +181,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
             <p class="item-price">
@@ -192,6 +192,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <p class="item-price">
@@ -202,6 +203,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             <p class="item-price">
@@ -212,6 +214,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное с брусничным джемом</h3>
             <p class="item-price">
@@ -222,6 +225,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочно-черничное с цельными ягодами черники</h3>
             <p class="item-price">
@@ -232,6 +236,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
             <p class="item-price">
@@ -242,6 +247,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное с шоколадной стружкой</h3>
             <p class="item-price">
@@ -252,6 +258,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочно-ванильное с кусочками шоколада</h3>
             <p class="item-price">
@@ -262,6 +269,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочноe с ментоловым сиропом</h3>
             <p class="item-price">
@@ -272,6 +280,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное с кусочками черного шоколада</h3>
             <p class="item-price">
@@ -282,6 +291,7 @@
           </a>
         </li>
         <li class="catalog-item">
+          <a class="button small-button view-button" href="#">Быстрый просмотр</a>
           <a href="#">
             <h3>Сливочное с мятным сиропом</h3>
             <p class="item-price">
