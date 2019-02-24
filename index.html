@@ -21,11 +21,11 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
           </a>
           <ul class="site-navigation">
-            <li>
-              <a class="main-menu" href="inner.html">Каталог</a>
+            <li class="main-menu-catalog">
+              <a class="main-menu" href="#">Каталог</a>
               <ul class="catalog-menu">
                 <li><a class="new-products" href="#">Новинки</a></li>
-                <li><a href="#">Сливочное</a></li>
+                <li><a href="inner.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
@@ -35,16 +35,17 @@
             <li><a class="main-menu" href="#">О Компании</a></li>
           </ul>
           <ul class="user-navigation">
-            <li class="search" aria-label="Поиск по сайту">
+            <li class="search">
+              <p class="visually-hidden">Поиск по сайту</p>
               <a class="search-link" href="#"></a>
-              <form action="https://echo.htmlacademy.ru" method="get">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <input type="search" id="id-search" name="search" placeholder="Что ищем?">
                 <label class="visually-hidden" for="id-search">Поиск</label>
               </form>
             </li>
             <li class="navigation-login">
               <a class="login-link" href="#">Вход</a>
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <input id="id-customer-login-email" type="email" name="customer-login-email" placeholder="Электронная почта"
                     required>
@@ -55,24 +56,29 @@
                     required>
                   <label class="visually-hidden" for="id-customer-password">Пароль</label>
                 </p>
-                <button class="button" type="submit">Войти</button>
-                <ul class="cant-login">
-                  <li><a href="#">Забыли пароль?</a></li>
-                  <li><a href="#">Новая регистрация</a></li>
-                </ul>
+                <div class="login-bottom">
+                  <button class="button small-button login-button" type="submit">Войти</button>
+                  <ul class="cant-login">
+                    <li><a href="#">Забыли пароль?</a></li>
+                    <li><a href="#">Новая регистрация</a></li>
+                  </ul>
+                </div>
               </form>
             </li>
-            <li class="empty-cart" aria-label="Содержимое корзины">
+            <li class="empty-cart">
+              <p class="visually-hidden">Содержимое корзины</p>
               <a class="empty-cart-link" href="#">Пусто</a>
             </li>
           </ul>
         </nav>
-        <div class="call-us" aria-label="Как с нами можно связаться">
+        <div class="call-us">
+          <p class="visually-hidden">Как с нами можно связаться</p>
           <p class="call-hours">С 10 до 20, ежедневно</p>
           <p class="tel">8 812 450-25-25</p>
         </div>
       </header>
       <section class="slider">
+        <h2 class="visually-hidden">Переключатель слайдов</h2>
         <div class="slider-controls">
           <label for="slider-product-1">Первый</label>
           <label for="slider-product-2">Второй</label>
@@ -222,10 +228,14 @@
       </main>
       <footer class="main-footer">
         <ul class="footer-social">
-          <li><a class="visually-hidden social-button twitter" href="#" title="Наша страница в Твиттере">Твиттер</a></li>
-          <li><a class="visually-hidden social-button instagram" href="#" title="Наша страница в Инстаграме">Инстаграм</a></li>
-          <li><a class="visually-hidden social-button facebook" href="#" title="Наша страница в Фейсбуке">Фейсбук</a></li>
-          <li><a class="visually-hidden social-button vkontakte" href="#" title="Наша страница во Вконтакте">Вконтакте</a></li>
+          <li><a class="twitter" href="#" title="Наша страница в Твиттере"><span class="visually-hidden">Наша страница
+                в Твиттере</span></a></li>
+          <li><a class="instagram" href="#" title="Наша страница в Инстаграме"><span class="visually-hidden">Наша
+                страница в Инстаграме</span></a></li>
+          <li><a class="facebook" href="#" title="Наша страница в Фейсбуке"><span class="visually-hidden">Наша страница
+                в Фейсбуке</span></a></li>
+          <li><a class="vkontakte" href="#" title="Наша страница во Вконтакте"><span class="visually-hidden">Наша
+                страница во Вконтакте</span></a></li>
         </ul>
         <ul class="footer-navigation">
           <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
@@ -233,9 +243,10 @@
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
-        <p class="footer-copyright">
-          Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019
-        </p>
+        <div class="footer-copyright">
+          <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="110" height="50" alt="Логотип HTML Academy"></a>
+          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
+        </div>
       </footer>
       <section class="modal-feedback">
         <h2>Мы обязательно вам ответим!</h2>
