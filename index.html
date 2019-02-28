@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="index-page">
+<body class="main-page">
   <input class="visually-hidden" type="radio" id="slider-product-1" name="slider-toggle" checked>
   <input class="visually-hidden" type="radio" id="slider-product-2" name="slider-toggle">
   <input class="visually-hidden" type="radio" id="slider-product-3" name="slider-toggle">
@@ -21,8 +21,8 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
           </a>
           <ul class="site-navigation">
-            <li class="main-menu-catalog">
-              <a class="main-menu" href="#">Каталог</a>
+            <li class="main-menu-catalog" tabindex="0">
+              <a class="main-menu" href="#"><span class="link-decoration">Каталог</span></a>
               <ul class="catalog-menu">
                 <li><a class="new-products" href="#">Новинки</a></li>
                 <li><a href="inner.html">Сливочное</a></li>
@@ -31,11 +31,11 @@
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a class="main-menu" href="#">Доставка и оплата</a></li>
-            <li><a class="main-menu" href="#">О Компании</a></li>
+            <li><a class="main-menu" href="#"><span class="link-decoration">Доставка и оплата</span></a></li>
+            <li><a class="main-menu" href="#"><span class="link-decoration">О Компании</a></span></li>
           </ul>
           <ul class="user-navigation">
-            <li class="search">
+            <li class="search" tabindex="0">
               <p class="visually-hidden">Поиск по сайту</p>
               <a class="search-link" href="#"></a>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -43,7 +43,7 @@
                 <label class="visually-hidden" for="id-search">Поиск</label>
               </form>
             </li>
-            <li class="navigation-login">
+            <li class="navigation-login" tabindex="0">
               <a class="login-link" href="#">Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
@@ -125,46 +125,42 @@
         <section class="best-sellers">
           <h2 class="visually-hidden">Хиты продаж</h2>
           <ul>
-            <li class="best-sellers-item">
+            <li class="best-sellers-item" tabindex="0">
               <a class="button small-button view-button" href="#">Быстрый просмотр</a>
               <a href="#">
-                <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                <h3><span class="link-decoration">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
                 <p class="item-price">
                   <b>310</b>
-                  <span class="weight">/кг</span>
                 </p>
                 <img src="img/orange-ice-cream.png" width="267" height="267" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
               </a>
             </li>
-            <li class="best-sellers-item">
+            <li class="best-sellers-item" tabindex="0">
               <a class="button small-button view-button" href="#">Быстрый просмотр</a>
               <a href="#">
-                <h3>Сливочно-кофейное с кусочками шоколада</h3>
+                <h3><span class="link-decoration">Сливочно-кофейное с кусочками шоколада</span></h3>
                 <p class="item-price">
                   <b>380</b>
-                  <span class="weight">/кг</span>
                 </p>
                 <img src="img/coffee-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
               </a>
             </li>
-            <li class="best-sellers-item">
+            <li class="best-sellers-item" tabindex="0">
               <a class="button small-button view-button" href="#">Быстрый просмотр</a>
               <a href="#">
-                <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                <h3><span class="link-decoration">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
                 <p class="item-price">
                   <b>355</b>
-                  <span class="weight">/кг</span>
                 </p>
                 <img src="img/strawberry-white-chocolate-ice-cream.png" width="267" height="267" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
               </a>
             </li>
-            <li class="best-sellers-item">
+            <li class="best-sellers-item" tabindex="0">
               <a class="button small-button view-button" href="#">Быстрый просмотр</a>
               <a href="#">
-                <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+                <h3><span class="link-decoration">Сливочное крем-брюле с карамельной подливкой</span></h3>
                 <p class="item-price">
                   <b>415</b>
-                  <span class="weight">/кг</span>
                 </p>
                 <img src="img/creme-brulee-ice-cream.png" width="267" height="267" alt="Фотография сливочного крем-брюле с карамельной подливкой">
               </a>
@@ -196,8 +192,7 @@
         <div class="blog-and-news">
           <article class="our-blog">
             <h2>Новое в нашем блоге</h2>
-            <p><a href="#"><b>10 способов сервировки фруктовых щербетов к столу</b></a>
-              <p>
+            <p><a href="#"><b>10 способов сервировки фруктовых щербетов к столу</b></a></p>
           </article>
           <section class="our-news">
             <div>
@@ -228,24 +223,32 @@
       </main>
       <footer class="main-footer">
         <ul class="footer-social">
-          <li><a class="twitter" href="#" title="Наша страница в Твиттере"><span class="visually-hidden">Наша страница
-                в Твиттере</span></a></li>
-          <li><a class="instagram" href="#" title="Наша страница в Инстаграме"><span class="visually-hidden">Наша
+          <li><a class="social-button twitter" href="#" title="Наша страница в Твиттере"><span class="visually-hidden">Наша
+                страница в Твиттере</span></a></li>
+          <li><a class="social-button instagram" href="#" title="Наша страница в Инстаграме"><span class="visually-hidden">Наша
                 страница в Инстаграме</span></a></li>
-          <li><a class="facebook" href="#" title="Наша страница в Фейсбуке"><span class="visually-hidden">Наша страница
-                в Фейсбуке</span></a></li>
-          <li><a class="vkontakte" href="#" title="Наша страница во Вконтакте"><span class="visually-hidden">Наша
+          <li><a class="social-button facebook" href="#" title="Наша страница в Фейсбуке"><span class="visually-hidden">Наша
+                страница в Фейсбуке</span></a></li>
+          <li><a class="social-button vkontakte" href="#" title="Наша страница во Вконтакте"><span class="visually-hidden">Наша
                 страница во Вконтакте</span></a></li>
         </ul>
-        <ul class="footer-navigation">
-          <li><a class="for-suppliers" href="#">Для поставщиков</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
+        <div class="footer-navigation-block">
+          <div class="footer-navigation-column">
+            <ul class="footer-navigation">
+              <li><a class="for-suppliers" href="#"><span class="link-decoration">Для поставщиков</span></a></li>
+              <li><a href="#"><span class="link-decoration">О производстве</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-navigation-column">
+            <ul class="footer-navigation">
+              <li><a href="#"><span class="link-decoration">Наши документы</span></a></li>
+              <li><a href="#"><span class="link-decoration">Экологические стандарты</span></a></li>
+            </ul>
+          </div>
+        </div>
         <div class="footer-copyright">
           <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="110" height="50" alt="Логотип HTML Academy"></a>
-          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
+          <p>Сделано в <a href="https://htmlacademy.ru"><span class="link-decoration">HTML Academy</span></a> © 2019</p>
         </div>
       </footer>
       <section class="modal-feedback">
