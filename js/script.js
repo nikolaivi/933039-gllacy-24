@@ -1,11 +1,11 @@
 var buttonFeedbackPopup = document.querySelector(".our-contacts-button");
 var popupFeedbackWindow = document.querySelector(".popup-feedback");
 var popupOverlay = document.querySelector(".overlay");
-var popupFeedbackClose = popupFeedbackWindow.querySelector(".popup-close");
 var popupFeedbackForm = popupFeedbackWindow.querySelector(".feedback-form");
+var popupFeedbackClose = popupFeedbackForm.querySelector(".popup-close");
 
-var popupFeedbackName = popupFeedbackWindow.querySelector("[name=customer-name]");
-var popupFeedbackEmail = popupFeedbackWindow.querySelector("[name=customer-email]");
+var popupFeedbackName = popupFeedbackForm.querySelector("[name=customer-name]");
+var popupFeedbackEmail = popupFeedbackForm.querySelector("[name=customer-email]");
 var popupFeedbackMessage = popupFeedbackWindow.querySelector("[name=customer-feedback]");
 
 var hasStorageSupport = true;
@@ -41,7 +41,7 @@ popupFeedbackClose.addEventListener("click", function (evt) {
 
 popupFeedbackForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  if (!popupFeedbackName || !popupFeedbackEmail || !popupFeedbackMessage) {
+  if (!popupFeedbackName.value || !popupFeedbackEmail.value || !popupFeedbackMessage.value) {
     evt.preventDefault();
     popupFeedbackWindow.classList.remove("popup-error");
     popupFeedbackWindow.offsetWidth = popupFeedbackWindow.offsetWidth;
@@ -51,6 +51,7 @@ popupFeedbackForm.addEventListener("submit", function (evt) {
       localStorage.setItem("name", popupFeedbackName.value);
       localStorage.setItem("email", popupFeedbackEmail.value);
     }
+    popupFeedbackForm.submit();
   }
 })
 

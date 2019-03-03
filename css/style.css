@@ -834,6 +834,8 @@ textarea::placeholder {
   position: relative;
   z-index: 1;
 
+  margin-left: 26px;
+
   width: 267px;
 }
 
@@ -863,11 +865,9 @@ textarea::placeholder {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 
   margin: 0;
+  margin-left: -26px;
   padding: 0;
 
   list-style: none;
@@ -1318,6 +1318,7 @@ textarea::placeholder {
   margin-bottom: 23px;
   margin-left: auto;
   padding: 0 0;
+  padding-top: 5px;
 }
 
 .catalog-page .main-footer {
@@ -1575,11 +1576,12 @@ h1 {
   overflow: hidden;
 
   height: 36px;
+  width: 193px;
 }
 
 .filter {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   padding: 0;
 }
 
@@ -1596,7 +1598,7 @@ h1 {
 
 .sort-form .form-element {
   margin-right: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .sort:hover select {
@@ -1705,8 +1707,8 @@ h1 {
   left: 132px;
 }
 
-.range-min:hover::before,
-.range-max:hover::before {
+.range-min:hover,
+.range-max:hover {
   cursor: pointer;
 }
 
@@ -1859,7 +1861,7 @@ h1 {
 .select-container::after {
   position: absolute;
   top: 13px;
-  right: 15px;
+  right: 10px;
 
   width: 15px;
   height: 15px;
@@ -1886,7 +1888,7 @@ h1 {
 
   height: 36px;
   margin-top: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 7px 27px 7px 27px;
 
   color: rgb(255, 255, 255);
@@ -2544,8 +2546,8 @@ h1 {
   75%,
   85%,
   95% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
   }
 
   10%,
@@ -2557,8 +2559,8 @@ h1 {
   70%,
   80%,
   90% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
   }
 }
 
