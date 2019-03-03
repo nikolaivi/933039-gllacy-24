@@ -111,15 +111,17 @@
     <section class="filter">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="sort-form" action="https://echo.htmlacademy.ru" method="get">
-        <p class="form-element sort">
-          <label for="id-sort">Сортировка:</label>
-          <select name="sort" id="id-sort">
-            <option value="sort-popular">по популярности</option>
-            <option value="sort-low-price">сначала недорогие</option>
-            <option value="sort-high-price">сначала дорогие</option>
-            <option value="sort-fat-content">по жирности</option>
-          </select>
-        </p>
+        <div class="form-element sort">
+          <p><label for="id-sort">Сортировка:</label></p>
+          <div class="select-container" tabindex="0">
+            <select name="sort" id="id-sort">
+              <option value="sort-popular">по популярности</option>
+              <option value="sort-low-price">сначала недорогие</option>
+              <option value="sort-high-price">сначала дорогие</option>
+              <option value="sort-fat-content">по жирности</option>
+            </select>
+          </div>
+      </div>
         <div class="form-element price-range">
           <div class="range-output">Цена: 100 руб. - 500 руб.</div>
           <div class="range-ruler">
@@ -331,19 +333,19 @@
             страница во Вконтакте</span></a></li>
     </ul>
     <div class="footer-navigation-block">
-        <div class="footer-navigation-column">
-          <ul class="footer-navigation">
-            <li><a class="for-suppliers" href="#"><span class="link-decoration">Для поставщиков</span></a></li>
-            <li><a href="#"><span class="link-decoration">О производстве</span></a></li>
-          </ul>
-        </div>
-        <div class="footer-navigation-column">
-          <ul class="footer-navigation">
-            <li><a href="#"><span class="link-decoration">Наши документы</span></a></li>
-            <li><a href="#"><span class="link-decoration">Экологические стандарты</span></a></li>
-          </ul>
-        </div>
+      <div class="footer-navigation-column">
+        <ul class="footer-navigation">
+          <li><a class="for-suppliers" href="#"><span class="link-decoration">Для поставщиков</span></a></li>
+          <li><a href="#"><span class="link-decoration">О производстве</span></a></li>
+        </ul>
       </div>
+      <div class="footer-navigation-column">
+        <ul class="footer-navigation">
+          <li><a href="#"><span class="link-decoration">Наши документы</span></a></li>
+          <li><a href="#"><span class="link-decoration">Экологические стандарты</span></a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-copyright">
       <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="110" height="50" alt="Логотип HTML Academy"></a>
       <p>Сделано в <a href="https://htmlacademy.ru"><span class="link-decoration">HTML Academy</span></a> © 2019</p>
