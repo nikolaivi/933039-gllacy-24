@@ -4,7 +4,6 @@
   font-family: 'Roboto';
   font-weight: 400;
 
-  src: url('../fonts/roboto.woff2') format('woff2');
   src: url('../fonts/roboto.woff') format('woff');
 }
 
@@ -12,7 +11,6 @@
   font-family: 'Roboto';
   font-weight: 500;
 
-  src: url('fonts/robotomedium.woff2') format('woff2');
   src: url('fonts/robotomedium.woff') format('woff');
 }
 
@@ -20,7 +18,6 @@
   font-family: 'Roboto';
   font-weight: 700;
 
-  src: url('fonts/robotobold.woff2') format('woff2');
   src: url('fonts/robotobold.woff') format('woff');
 }
 
@@ -79,7 +76,8 @@ img {
 }
 
 a:hover .link-decoration,
-a:focus .link-decoration {
+a:focus .link-decoration,
+a:active .link-decoration {
   -webkit-box-shadow: 0 1px 0 0 rgba(255, 188, 158, .3);
   box-shadow: 0 1px 0 0 rgba(255, 188, 158, .3);
 }
@@ -109,11 +107,7 @@ input[type='radio'].visually-hidden {
 
 /* Общие стили для тектстовых полей форм */
 
-input[type='email'],
-input[type='password'],
-input[type='search'],
-input[type='text'],
-.feedback-form textarea {
+.text-input {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -129,26 +123,19 @@ input[type='text'],
   padding: 8px 14px 24px;
 }
 
-input[type='email']:hover,
-input[type='password']:hover,
-input[type='search']:hover,
-input[type='text']:hover,
-.feedback-form textarea:hover {
+.text-input:hover {
   padding: 9px 14px 7px;
 
   border-width: 2px;
   border-color: rgb(154, 154, 154);
 }
 
-input[type='email']:focus,
-input[type='password']:focus,
-input[type='search']:focus,
-input[type='text']:focus,
-.feedback-form textarea:focus {
+.text-input:focus {
   padding: 9px 14px 7px;
 
   border-width: 2px;
   border-color: rgb(46, 136, 228);
+  outline: none;
 }
 
 .feedback-form textarea:hover,
@@ -156,11 +143,7 @@ input[type='text']:focus,
   padding: 7px 14px 23px;
 }
 
-input[type='email']::-webkit-input-placeholder,
-input[type='password']::-webkit-input-placeholder,
-input[type='search']::-webkit-input-placeholder,
-input[type='text']::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+.text-input::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -169,11 +152,7 @@ textarea::-webkit-input-placeholder {
   color: rgb(153, 153, 153);
 }
 
-input[type='email']:-ms-input-placeholder,
-input[type='password']:-ms-input-placeholder,
-input[type='search']:-ms-input-placeholder,
-input[type='text']:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+.text-input:-ms-input-placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -182,11 +161,7 @@ textarea:-ms-input-placeholder {
   color: rgb(153, 153, 153);
 }
 
-input[type='email']::-ms-input-placeholder,
-input[type='password']::-ms-input-placeholder,
-input[type='search']::-ms-input-placeholder,
-input[type='text']::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+.text-input::-ms-input-placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -195,11 +170,7 @@ textarea::-ms-input-placeholder {
   color: rgb(153, 153, 153);
 }
 
-input[type='email']::placeholder,
-input[type='password']::placeholder,
-input[type='search']::placeholder,
-input[type='text']::placeholder,
-textarea::placeholder {
+.text-input::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -208,22 +179,24 @@ textarea::placeholder {
   color: rgb(153, 153, 153);
 }
 
-/* Стили для кнопок */
+/* Стили для стандартных кнопок */
 
 .button {
   display: block;
 
-  padding: 10px 0;
+  padding: 9px 0 11px;
 
   cursor: pointer;
   text-align: center;
 
   color: rgb(255, 255, 255);
   border: none;
-  border-radius: 50px;
-  background: rgb(242, 104, 67);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(242, 104, 67)), to(rgb(231, 74, 53)));
-  background: linear-gradient(to bottom, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(242, 104, 67)), to(rgb(231, 74, 53)));
+  background-image: linear-gradient(to bottom, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+  -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
 }
 
 .slide-button {
@@ -234,8 +207,7 @@ textarea::placeholder {
   width: 280px;
   margin: 0 auto;
 
-  -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
+  border-radius: 35px;
   text-shadow: 0 2px 5px rgba(160, 32, 11, .76);
 }
 
@@ -248,26 +220,23 @@ textarea::placeholder {
 .login-button {
   width: 100px;
 
+  border-radius: 20px;
   -webkit-box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
   box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
 }
 
 .free-raspberries-button {
-  width: 168px;
-
-  -webkit-box-shadow: 0 2px 2px rgba(85, 8, 0, .54);
-  box-shadow: 0 2px 2px rgba(85, 8, 0, .54);
+  width: 165px;
+  padding: 10px 0 11px;
 }
 
 .free-chocolate-button {
   width: 189px;
-
-  -webkit-box-shadow: 0 2px 2px rgba(85, 8, 0, .54);
-  box-shadow: 0 2px 2px rgba(85, 8, 0, .54);
+  padding: 10px 0 11px;
 }
 
-.best-sellers-item .view-button,
-.catalog-item .view-button {
+.catalog-item .view-button,
+.best-sellers-item .view-button {
   position: absolute;
   bottom: -52px;
   left: 33px;
@@ -276,22 +245,17 @@ textarea::placeholder {
 
   width: 200px;
 
+  border-radius: 20px;
   -webkit-box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
   box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
 }
 
 .our-news-button {
-  width: 129px;
-
-  -webkit-box-shadow: 0 1px 2px rgba(172, 16, 0, .64);
-  box-shadow: 0 1px 2px rgba(172, 16, 0, .64);
+  width: 128px;
 }
 
 .our-contacts-button {
-  width: 250px;
-
-  -webkit-box-shadow: 0 1px 2px rgba(172, 16, 0, .64);
-  box-shadow: 0 1px 2px rgba(172, 16, 0, .64);
+  width: 252px;
 }
 
 .proceed-to-checkout-button {
@@ -300,21 +264,29 @@ textarea::placeholder {
 
   width: 170px;
 
+  border-radius: 20px;
   -webkit-box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
   box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
 }
 
+.popup-button {
+  width: 139px;
+  margin-left: auto;
+}
+
 .button:hover,
 .button:focus {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(245, 134, 105)), to(rgb(236, 111, 94)));
-  background: linear-gradient(to bottom, rgb(245, 134, 105) 0%, rgb(236, 111, 94) 100%);
+  color: rgb(255, 255, 255);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 104, 67, .8)), to(rgba(231, 74, 53, .8)));
+  background-image: linear-gradient(to bottom, rgba(242, 104, 67, .8) 0%, rgba(231, 74, 53, .8) 100%);
   -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .button:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(215, 70, 50)), to(rgb(225, 97, 62)));
-  background: linear-gradient(to bottom, rgb(215, 70, 50) 0%, rgb(225, 97, 62) 100%);
+  background-color: rgb(0, 0, 0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(231, 74, 53, .93)), to(rgba(242, 104, 67, .93)));
+  background-image: linear-gradient(to bottom, rgba(231, 74, 53, .93) 0%, rgba(242, 104, 67, .93) 100%);
   -webkit-box-shadow: inset 0 2px 2px rgba(148, 39, 24, 1);
   box-shadow: inset 0 2px 2px rgba(148, 39, 24, 1);
 }
@@ -448,7 +420,7 @@ textarea::placeholder {
   background-color: rgb(255, 255, 255);
 }
 
-/* КАТАЛОГ Стили для inner.html */
+/* Стили для страницы с каталогом */
 
 .catalog-page {
   min-width: 1200px;
@@ -521,7 +493,7 @@ textarea::placeholder {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  max-width: 650px;
+  max-width: 680px;
   margin-left: 10px;
 }
 
@@ -551,7 +523,7 @@ textarea::placeholder {
   -ms-flex-pack: end;
   justify-content: flex-end;
 
-  width: 300px;
+  max-width: 300px;
   margin-left: auto;
   padding: 0;
   padding-top: 14px;
@@ -642,6 +614,10 @@ textarea::placeholder {
 .login-link,
 .empty-cart-link,
 .full-cart-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+
   position: relative;
 
   display: block;
@@ -650,22 +626,15 @@ textarea::placeholder {
 .search-link,
 .login-link,
 .empty-cart-link,
-.full-cart-link {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-}
-
-.search-link,
-.login-link,
-.empty-cart-link {
+.empty-cart-link:hover,
+.empty-cart-link:focus,
+.empty-cart-link:active {
   color: rgb(255, 255, 255);
 }
 
 .full-cart-link {
   color: rgb(50, 50, 50);
 }
-
 
 /* Наведение и нажатие на ссылки в шапке */
 
@@ -694,7 +663,10 @@ textarea::placeholder {
 }
 
 .login-link:hover,
-.login-link:focus {
+.login-link:focus,
+.full-cart a:hover,
+.full-cart a:focus,
+.full-cart a:active {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -714,16 +686,10 @@ textarea::placeholder {
   background-image: url('../img/entrance.svg');
 }
 
-.full-cart a:hover,
-.full-cart a:focus,
-.full-cart a:active {
-  color: rgb(232, 77, 55);
-}
-
 /* Телефон в шапке */
 
 .call-us {
-  width: 267px;
+  max-width: 300px;
   margin-left: auto;
 
   text-align: right;
@@ -772,16 +738,17 @@ textarea::placeholder {
   padding-bottom: 113px;
 
   border-radius: 15px;
+  background-repeat: no-repeat;
 }
 
 .free-raspberries {
   background-color: rgb(100, 20, 30);
-  background-image: url('../img/raspberry-background.jpg');
+  background-image: url('../img/raspberry-background.png');
 }
 
 .free-chocolate {
   background-color: rgb(65, 40, 30);
-  background-image: url('../img/chocolate-background.jpg');
+  background-image: url('../img/chocolate-background.png');
 }
 
 .special-offers h3 {
@@ -834,9 +801,8 @@ textarea::placeholder {
   position: relative;
   z-index: 1;
 
-  margin-left: 26px;
-
   width: 267px;
+  margin-left: 26px;
 }
 
 .catalog {
@@ -883,6 +849,7 @@ textarea::placeholder {
   margin-right: 5px;
   margin-bottom: 6px;
   margin-left: 5px;
+  padding: 0;
 
   text-align: center;
 }
@@ -994,7 +961,7 @@ textarea::placeholder {
 
   border-radius: 15px;
   background-color: rgb(237, 225, 200);
-  background-image: url('../img/waffle-background.jpg');
+  background-image: url('../img/waffle-background.png');
 }
 
 .our-features ul {
@@ -1120,7 +1087,7 @@ textarea::placeholder {
   width: 560px;
   min-height: 220px;
 
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: rgb(255, 255, 255);
   background-image: url('../img/strawberry-background.png');
   background-repeat: no-repeat;
@@ -1290,12 +1257,12 @@ textarea::placeholder {
   font-size: 18px;
   font-weight: 700;
 
-  margin-top: 8px;
-  margin-bottom: 2px;
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 .our-contacts-button {
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 /* Стили для подвала */
@@ -1360,7 +1327,7 @@ textarea::placeholder {
 
   width: 38px;
   height: 38px;
-  margin-top: 16px;
+  margin-top: 18px;
   margin-right: 11px;
 }
 
@@ -1441,7 +1408,7 @@ textarea::placeholder {
   border: 3px solid rgba(255, 255, 255, .5);
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-clip: padding-box;
 }
 
 .twitter::before,
@@ -1563,7 +1530,8 @@ h1 {
   line-height: 41px;
 
   margin: 0;
-  margin-bottom: 27px;
+  margin-top: 2px;
+  margin-bottom: 25px;
   padding: 0;
 }
 
@@ -1575,8 +1543,8 @@ h1 {
   display: inline-block;
   overflow: hidden;
 
-  height: 36px;
   width: 193px;
+  height: 36px;
 }
 
 .filter {
@@ -1727,7 +1695,7 @@ h1 {
 
 .fat-content-radio:not(:checked)+label::before {
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: -32px;
 
   width: 22px;
@@ -1743,7 +1711,7 @@ h1 {
 
 .fat-content-radio:checked+label::after {
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: -32px;
 
   width: 22px;
@@ -1837,7 +1805,7 @@ h1 {
 
 .fat-content ul,
 .filling ul {
-  padding: 6px 0 3px;
+  padding: 7px 0 2px;
 }
 
 .sort-form select {
@@ -1845,7 +1813,7 @@ h1 {
 
   width: 150%;
   padding-right: 32px;
-  padding-left: 15px;
+  padding-left: 12px;
 
   text-align: left;
 
@@ -2198,6 +2166,16 @@ h1 {
   line-height: 24px;
 
   color: rgb(50, 50, 50);
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .3);
+}
+
+.cant-login a:hover,
+.cant-login a:focus,
+.cant-login a:active {
+  color: rgb(232, 77, 55);
+  -webkit-box-shadow: 0 1px 0 0 rgb(249, 205, 196);
+  box-shadow: 0 1px 0 0 rgb(249, 205, 196);
 }
 
 .navigation-login:hover .login-form,
@@ -2344,7 +2322,7 @@ h1 {
   display: flex;
 }
 
-/* Всплывающее окно для отзывов */
+/* Попап для отзывов */
 
 .popup {
   position: fixed;
@@ -2405,15 +2383,7 @@ h1 {
   width: 100%;
 }
 
-.popup-button {
-  margin-left: auto;
-  padding: 9px 23px 11px;
-
-  -webkit-box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
-  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, .64);
-}
-
-/* Показ всплывающих окон */
+/* Показ попапа */
 
 .overlay {
   position: fixed;
@@ -2426,7 +2396,7 @@ h1 {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, .7);
+  background-image: url('../img/overlay.png');
 }
 
 .popup-show {
@@ -2434,8 +2404,8 @@ h1 {
 
   -webkit-animation-name: appearing;
   animation-name: appearing;
-  -webkit-animation-duration: .7s;
-  animation-duration: .7s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
@@ -2452,42 +2422,56 @@ h1 {
 .overlay-show {
   display: block;
 
-  -webkit-animation-name: darkening;
-  animation-name: darkening;
-  -webkit-animation-duration: .7s;
-  animation-duration: .7s;
+  -webkit-animation-name: overlay-appearing;
+  animation-name: overlay-appearing;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 
 @-webkit-keyframes appearing {
   from {
-    -webkit-transform: translateX(350px);
-    transform: translateX(350px);
+    -webkit-transform: translate(350px, 150px) skewY(30deg) scale(0);
+    transform: translate(350px, 150px) skewY(30deg) scale(0);
 
     opacity: 0;
   }
 
   to {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-
     opacity: 1;
   }
 }
 
 @keyframes appearing {
   from {
-    -webkit-transform: translateX(350px);
-    transform: translateX(350px);
+    -webkit-transform: translate(350px, 150px) skewY(30deg) scale(0);
+    transform: translate(350px, 150px) skewY(30deg) scale(0);
 
     opacity: 0;
   }
 
   to {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+@-webkit-keyframes overlay-appearing {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-appearing {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
   }
 }
@@ -2561,27 +2545,5 @@ h1 {
   90% {
     -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
-  }
-}
-
-@-webkit-keyframes darkening {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  to {
-    background-color: rgba(0, 0, 0, .7);
-    ;
-  }
-}
-
-@keyframes darkening {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  to {
-    background-color: rgba(0, 0, 0, .7);
-    ;
   }
 }

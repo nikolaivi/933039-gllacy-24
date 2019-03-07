@@ -40,7 +40,7 @@
               <p class="visually-hidden">Поиск по сайту</p>
               <a class="search-link" href="#"></a>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" id="id-search" name="search" placeholder="Что ищем?">
+                <input class="text-input" type="search" id="id-search" name="search" placeholder="Что ищем?">
                 <label class="visually-hidden" for="id-search">Поиск</label>
               </form>
             </li>
@@ -48,12 +48,12 @@
               <a class="login-link" href="#">Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
-                  <input id="id-customer-login-email" type="email" name="customer-login-email" placeholder="Электронная почта"
+                  <input class="text-input" id="id-customer-login-email" type="email" name="customer-login-email" placeholder="Электронная почта"
                     required>
                   <label class="visually-hidden" for="id-customer-login-email">Электронная почта</label>
                 </p>
                 <p>
-                  <input id="id-customer-password" type="password" name="customer-password" placeholder="Пароль"
+                  <input class="text-input" id="id-customer-password" type="password" name="customer-password" placeholder="Пароль"
                     required>
                   <label class="visually-hidden" for="id-customer-password">Пароль</label>
                 </p>
@@ -202,7 +202,7 @@
                 происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="id-news-email">Электронная почта</label>
-                <input type="email" name="news-email" id="id-news-email" placeholder="Электронная почта" required>
+                <input class="text-input" type="email" name="news-email" id="id-news-email" placeholder="Электронная почта" required>
                 <button class="button small-button our-news-button" type="submit">Отправить</button>
               </form>
             </div>
@@ -260,15 +260,15 @@
         <h2>Мы обязательно вам ответим!</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
-            <input id="id-customer-name" type="text" name="customer-name" placeholder="Как вас зовут?">
+            <input class="text-input" id="id-customer-name" type="text" name="customer-name" placeholder="Как вас зовут?">
             <label class="visually-hidden" for="id-customer-name">Ваше имя</label>
           </p>
           <p>
-            <input id="id-customer-email" type="email" name="customer-email" placeholder="Ваша почта для ответа?">
+            <input class="text-input" id="id-customer-email" type="email" name="customer-email" placeholder="Ваша почта для ответа?">
             <label class="visually-hidden" for="id-customer-email">Ваш адрес электронной почты</label>
           </p>
           <p>
-            <textarea id="id-customer-feedback" name="customer-feedback" placeholder="Напишите что-нибудь..." rows="5"></textarea>
+            <textarea class="text-input" id="id-customer-feedback" name="customer-feedback" placeholder="Напишите что-нибудь..." rows="5"></textarea>
             <label class="visually-hidden" for="id-customer-feedback">Ваше сообщение</label>
           </p>
           <button class="button small-button popup-button" type="submit">Отправить</button>
