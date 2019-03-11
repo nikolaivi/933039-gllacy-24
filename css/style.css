@@ -4,21 +4,27 @@
   font-family: 'Roboto';
   font-weight: 400;
 
-  src: url('../fonts/roboto.woff') format('woff');
+  src:
+  url('../fonts/roboto.woff2') format('woff2'),
+  url('../fonts/roboto.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 500;
 
-  src: url('fonts/robotomedium.woff') format('woff');
+  src:
+  url('../fonts/robotomedium.woff2') format('woff2'),
+  url('../fonts/robotomedium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 700;
 
-  src: url('fonts/robotobold.woff') format('woff');
+  src:
+  url('../fonts/robotobold.woff2') format('woff2'),
+  url('../fonts/robotobold.woff') format('woff');
 }
 
 /* Общие стили */
@@ -82,7 +88,7 @@ a:active .link-decoration {
   box-shadow: 0 1px 0 0 rgba(255, 188, 158, .3);
 }
 
-/* Visually-hidden */
+/* visually-hidden */
 
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
@@ -664,9 +670,9 @@ input[type='radio'].visually-hidden {
 
 .login-link:hover,
 .login-link:focus,
-.full-cart a:hover,
-.full-cart a:focus,
-.full-cart a:active {
+.full-cart-link:hover,
+.full-cart-link:focus,
+.full-cart-link:active {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -1205,17 +1211,21 @@ input[type='radio'].visually-hidden {
   width: 1200px;
   height: 430px;
 
-  background-image: url('../img/pin.svg'),
+  background-image:
+    url('../img/pin.svg'),
     url('../img/pin-shadow.png'),
     url('../img/map-background.png');
   background-repeat: no-repeat;
-  background-position: 266px 142px,
+  background-position:
+    266px 142px,
     305px 175px,
     0 0;
 }
 
 .contacts-map iframe {
   border: none;
+  width: 1200px;
+  height: 430px;
 }
 
 .contacts {
@@ -1656,7 +1666,7 @@ h1 {
 .range-min::before,
 .range-max::before {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 7px;
 
   width: 20px;
@@ -1943,6 +1953,13 @@ h1 {
   background-color: rgba(255, 255, 255, .2);
 }
 
+.pagination-item:first-child a:hover,
+.pagination-item:first-child a:focus,
+.pagination-item:last-child a:hover,
+.pagination-item:last-child a:focus {
+  background-color: transparent;
+}
+
 .previous-page a::before {
   position: absolute;
   top: 9px;
@@ -1975,6 +1992,10 @@ h1 {
   border: 1px solid rgb(255, 255, 255);
   border-bottom: none;
   border-left: none;
+}
+
+.page-disabled a:hover {
+  cursor: default;
 }
 
 .previous-page.page-disabled a::before,
@@ -2043,11 +2064,11 @@ h1 {
   background-color: rgb(208, 112, 88);
 }
 
-.catalog-menu li:first-child a {
+.catalog-menu .first-item {
   border-radius: 5px 5px 0 0;
 }
 
-.catalog-menu li:last-child a {
+.catalog-menu .last-item {
   border-radius: 0 0 5px 5px;
 }
 
